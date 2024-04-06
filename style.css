@@ -1,0 +1,153 @@
+/* <stars from the script.js> */
+.star-container {
+    filter: drop-shadow(0 0 10px #fff);
+    position: absolute;
+}
+.star {
+    width: 15px;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    clip-path: polygon( 50% 0%, 
+                        61% 35%, 
+                        98% 35%, 
+                        68% 57%, 
+                        79% 91%, 
+                        50% 70%, 
+                        21% 91%, 
+                        32% 57%, 
+                        2% 35%, 
+                        39% 35% );
+}
+/* </stars from the script.js> */
+
+
+
+/* <nav> */
+nav {
+    padding: 2rem 5rem 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+nav > * {
+    width: 50%;
+    min-width: 250px;
+}
+nav > h1 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+nav > ul > li {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav > ul > li > div > i {
+    font-size: 2rem;
+}
+nav > ul > li > div > i:hover {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px #ececee);
+}
+/* </nav> */
+
+
+
+/* <main> */
+main {
+    height: 32rem;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+main > .profile > .profile-container {
+    position: relative;
+    border: 1px solid #ececee;
+    width: 45%;
+    min-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main > .profile > .profile-container::before {
+    content: "";
+    position: absolute;
+    width: 35%;
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ececee;
+}
+main > .profile > .profile-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-radius: 1000px 1000px 0 0;
+    aspect-ratio: 100 / 50;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #ececee;
+}
+main > .description {
+    padding: 0 7rem;    
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+main > .description > .description-texts > h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-wrap: balance;
+}
+main > .description > .description-texts > p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    text-wrap: balance;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    margin-bottom: 5%;
+}
+main > .description > .description-texts > button {
+    padding: 16px 32px;
+    border-radius: 64px;
+    color: #16161d;
+    font-weight: 700;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #16161d;
+}
+main > .description > .description-texts > button:hover {
+    box-shadow: 0 0 20px #ececee;
+}
+/* </main> */
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+    color: #ececee;
+}
+body {
+    background-color: #16161d;
+    padding: 0;
+    margin: 0;
+}
